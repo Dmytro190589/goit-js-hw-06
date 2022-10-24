@@ -12,3 +12,28 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryEl = document.querySelector('.gallery');
+
+const newGallary = images.map(el => {
+  const newEl = document.createElement('li');
+  newEl.classList.add('newElList');
+  newEl.insertAdjacentHTML('afterbegin',`<img class="imgEl" src = "${el.url}" alt = "${el.alt}" width = "100" highth ="100" />`);
+  return newEl;
+}
+);
+galleryEl.append(...newGallary);
+
+
+
+
+
+// Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть список ul.gallery.
+
+// <ul class="gallery"></ul>
+
+// Используй массив объектов images для создания элементов <img> вложенных в <li>. 
+// Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
+
+// Все элементы галереи должны добавляться в DOM за одну операцию вставки.
+// Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.
