@@ -5,17 +5,17 @@ const buttons = document.querySelector('#counter');
 const increment  = buttons.lastElementChild;
 const decrement   = buttons.firstElementChild;
 
-const spanButton = document.querySelector('#value');
+const spanEl = document.querySelector('#value');
 
 let counterValue = 0;
 
 decrement.addEventListener('click', ()=>{
     counterValue -=1;
-    spanButton.textContent = counterValue;
+    spanEl.textContent = counterValue;
 })
 increment.addEventListener('click', ()=>{
     counterValue += 1;
-    spanButton.textContent = counterValue;
+    spanEl.textContent = counterValue;
 })
 
 // Счетчик состоит из спана и кнопок, которые, при клике, должны увеличивать и уменьшать его значение на единицу.
